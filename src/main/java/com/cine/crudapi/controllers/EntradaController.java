@@ -16,7 +16,7 @@ import com.cine.crudapi.repositories.*;
 public class EntradaController {
     @Autowired
     private EntradaRepository entradaRepository;
-    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<EntradaModel> getAll() { return entradaRepository.findAll(); }
     @GetMapping("/{id}")

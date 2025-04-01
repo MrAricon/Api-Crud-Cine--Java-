@@ -16,7 +16,7 @@ import com.cine.crudapi.repositories.*;
 public class ButacaController {
     @Autowired
     private ButacaRepository butacaRepository;
-    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<ButacaModel> getAll() { return butacaRepository.findAll(); }
     @GetMapping("/{id}")

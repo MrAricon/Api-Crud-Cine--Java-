@@ -16,7 +16,7 @@ import com.cine.crudapi.repositories.*;
 public class SalaController {
     @Autowired
     private SalaRepository salaRepository;
-    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<SalaModel> getAll() { return salaRepository.findAll(); }
     @GetMapping("/{id}")

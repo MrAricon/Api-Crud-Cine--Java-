@@ -16,7 +16,7 @@ import com.cine.crudapi.repositories.*;
 public class PeliculaController {
     @Autowired
     private PeliculaRepository peliculaRepository;
-    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<PeliculaModel> getAll() { return peliculaRepository.findAll(); }
     @GetMapping("/{id}")

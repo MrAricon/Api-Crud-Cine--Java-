@@ -16,7 +16,7 @@ import com.cine.crudapi.repositories.*;
 public class SesionController {
     @Autowired
     private SesionRepository sesionRepository;
-    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<SesionModel> getAll() { return sesionRepository.findAll(); }
     @GetMapping("/{id}")
