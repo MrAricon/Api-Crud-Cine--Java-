@@ -1,4 +1,4 @@
-package com.CineModel.crudapi.controllers;
+package com.cine.crudapi.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
