@@ -19,6 +19,10 @@ public class SesionController {
     @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<SesionModel> getAll() { return sesionRepository.findAll(); }
+    @GetMapping("/peliculas/{peliculaId}")
+    public List<SesionModel> getByPeliculaId(@PathVariable int peliculaId) {
+        return sesionRepository.findByPeliculaId(peliculaId);
+    }
     @GetMapping("/{id}")
     public Optional<SesionModel> getById(@PathVariable int id) { return sesionRepository.findById(id); }
     @PostMapping
